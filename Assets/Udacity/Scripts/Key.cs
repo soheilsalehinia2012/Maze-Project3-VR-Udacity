@@ -9,6 +9,7 @@ public class Key : MonoBehaviour
 	public Door door;
 	public GameObject key;
 	[HideInInspector] public bool collected;
+	public UIText uiText;
 
 	void Start(){
 		collected = false;
@@ -31,6 +32,7 @@ public class Key : MonoBehaviour
 		collected = true;
         // Destroy the key. Check the Unity documentation on how to use Destroy
 		Destroy(key);
+		uiText.hasKey = true;
     }
 
 }
